@@ -32,7 +32,6 @@ public class UserAccountServiceImpl implements UserAccountService, CommandLineRu
 		}
 		UserAccount userAccount = modelMapper.map(userRegisterDto, UserAccount.class);
 		// generate crypt password
-//		String password = BCrypt.hashpw(userRegisterDto.getPassword(), BCrypt.gensalt());
 		String password = passwordEncoder.encode(userRegisterDto.getPassword());
 		userAccount.setPassword(password);
 		userAccountRepository.save(userAccount);
@@ -88,7 +87,6 @@ public class UserAccountServiceImpl implements UserAccountService, CommandLineRu
 	public void changePassword(String login, String newPassword) {
 		UserAccount userAccount = userAccountRepository.findById(login).orElseThrow(UserNotFoundException::new);
 		// generate crypt password
-//		String password = BCrypt.hashpw(newPassword, BCrypt.gensalt());
 		String password = passwordEncoder.encode(newPassword);
 		userAccount.setPassword(password);
 		userAccountRepository.save(userAccount);
