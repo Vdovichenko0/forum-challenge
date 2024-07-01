@@ -1,0 +1,3 @@
+create exception if in post title more 100 symbols
+content not more 1000
+title not more 100
