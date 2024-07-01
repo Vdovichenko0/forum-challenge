@@ -1,0 +1,1260 @@
+{
+	"info": {
+		"_postman_id": "f2c78aa8-dd38-4165-ba13-742528586a9e",
+		"name": "Post",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34073136"
+	},
+	"item": [
+		{
+			"name": "Add Post",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "maxvd",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Dog by name Sharik\",\n\t\"content\": \"Today Sharik go to the new parents \",\n\t\"tags\":[\"Dog\", \"Pets\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/forum/post/{{user}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"forum",
+						"post",
+						"{{user}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Post",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Dog by name Sharik\",\n\t\"content\": \"Today Sharik go to the new parents \",\n\t\"tags\":[\"Dog\", \"Pets\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/forum/post/{{user}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"forum",
+								"post",
+								"{{user}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Dec 2021 09:39:06 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"61b86639905cb348d52a138d\",\n\t\"title\": \"Dog by name Sharik\",\n\t\"content\": \"Today Sharik go to the new parents \",\n    \"dateCreated\": \"2023-12-14T11:39:05\",\n\t\"tags\":[\"Dog\", \"Pets\"],\n    \"likes\": 0,\n    \"comments\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Post > 1000 symb",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "maxvdn",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Dog by name Sharik\",\n\t\"content\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed vel ligula in metus vestibulum venenatis. Nullam consequat justo nec lectus scelerisque ultricies. Ut sollicitudin, risus vel feugiat rutrum, odio sem commodo magna, vel mollis metus tortor sit amet quam. Quisque scelerisque, nisl sed ultrices tincidunt, leo ligula aliquam sem, ac aliquet ligula lorem sit amet metus. Nunc sed libero eu enim faucibus consequat. Duis efficitur eros eu diam tristique, a interdum lacus feugiat. Fusce rutrum velit nec elit fermentum, non fermentum ante rhoncus. Cras efficitur tortor id ante consectetur posuere. Vivamus eleifend erat sit amet dui laoreet, non ullamcorper tortor vestibulum. Nullam tincidunt convallis ex, sed aliquet velit vestibulum quis.Proin in mauris vitae nisi mollis bibendum. Sed in purus nec urna venenatis gravida. Integer ac leo sed velit convallis lacinia. Phasellus id nisi dapibus, bibendum magna eget, rutrum dolor. Etiam sed erat sit amet mi accumsan ultricies. Vestibulum pretium sapien nec ultricies venenatis. Curabitur eu risus quis quam tristique venenatis. Nulla facilisi. Phasellus finibus libero nec dapibus luctus. Nunc pretium turpis at libero viverra, ut venenatis libero congue. In bibendum urna vel ante hendrerit tempus. Duis varius arcu at lacus blandit, id sodales nunc efficitur. Mauris nec nisl a mi posuere auctor. Curabitur sed augue non odio dignissim venenatis.Donec efficitur vel tortor ut bibendum. Aliquam vitae consequat eros. Phasellus vel congue ipsum, nec dictum augue. Vestibulum sed cursus velit. Fusce nec justo eget purus ullamcorper convallis ac sit amet nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In posuere nisl a purus fermentum, a tincidunt eros interdum. Ut non tincidunt justo. Aenean semper diam eu risus vestibulum, eget scelerisque odio molestie. Nulla sagittis, sapien a interdum feugiat, nulla velit blandit orci, eget eleifend est purus quis justo. Vestibulum faucibus luctus elit, nec auctor nulla posuere eget. Vivamus auctor erat at nisi feugiat, sed convallis odio suscipit. Integer vitae quam augue. Phasellus aliquet sollicitudin sapien nec lacinia.\",\n\t\"tags\":[\"Dog\", \"Pets\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/forum/post/{{user}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"forum",
+						"post",
+						"{{user}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Post",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Dog by name Sharik\",\n\t\"content\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed vel ligula in metus vestibulum venenatis. Nullam consequat justo nec lectus scelerisque ultricies. Ut sollicitudin, risus vel feugiat rutrum, odio sem commodo magna, vel mollis metus tortor sit amet quam. Quisque scelerisque, nisl sed ultrices tincidunt, leo ligula aliquam sem, ac aliquet ligula lorem sit amet metus. Nunc sed libero eu enim faucibus consequat. Duis efficitur eros eu diam tristique, a interdum lacus feugiat. Fusce rutrum velit nec elit fermentum, non fermentum ante rhoncus. Cras efficitur tortor id ante consectetur posuere. Vivamus eleifend erat sit amet dui laoreet, non ullamcorper tortor vestibulum. Nullam tincidunt convallis ex, sed aliquet velit vestibulum quis.Proin in mauris vitae nisi mollis bibendum. Sed in purus nec urna venenatis gravida. Integer ac leo sed velit convallis lacinia. Phasellus id nisi dapibus, bibendum magna eget, rutrum dolor. Etiam sed erat sit amet mi accumsan ultricies. Vestibulum pretium sapien nec ultricies venenatis. Curabitur eu risus quis quam tristique venenatis. Nulla facilisi. Phasellus finibus libero nec dapibus luctus. Nunc pretium turpis at libero viverra, ut venenatis libero congue. In bibendum urna vel ante hendrerit tempus. Duis varius arcu at lacus blandit, id sodales nunc efficitur. Mauris nec nisl a mi posuere auctor. Curabitur sed augue non odio dignissim venenatis.Donec efficitur vel tortor ut bibendum. Aliquam vitae consequat eros. Phasellus vel congue ipsum, nec dictum augue. Vestibulum sed cursus velit. Fusce nec justo eget purus ullamcorper convallis ac sit amet nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In posuere nisl a purus fermentum, a tincidunt eros interdum. Ut non tincidunt justo. Aenean semper diam eu risus vestibulum, eget scelerisque odio molestie. Nulla sagittis, sapien a interdum feugiat, nulla velit blandit orci, eget eleifend est purus quis justo. Vestibulum faucibus luctus elit, nec auctor nulla posuere eget. Vivamus auctor erat at nisi feugiat, sed convallis odio suscipit. Integer vitae quam augue. Phasellus aliquet sollicitudin sapien nec lacinia.\",\n\t\"tags\":[\"Dog\", \"Pets\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/forum/post/{{user}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"forum",
+								"post",
+								"{{user}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Dec 2021 09:39:06 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n   \"title\": \"ERROR?!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Post > 100 Title symb",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "maxvd",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Dog by name Sharik Dog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name Sharik\",\n\t\"content\": \"Lorem ipsum\",\n\t\"tags\":[\"Dog\", \"Pets\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/forum/post/{{user}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"forum",
+						"post",
+						"{{user}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Post",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Dog by name Sharik Dog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name SharikDog by name Sharik\",\n\t\"content\": \"Lorem ipsum\",\n\t\"tags\":[\"Dog\", \"Pets\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/forum/post/{{user}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"forum",
+								"post",
+								"{{user}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Dec 2021 09:39:06 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n   \"title\": \"ERROR?!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Find post by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/forum/post/{{postId}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"forum",
+						"post",
+						"{{postId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Find post by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/forum/post/{{postId}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"forum",
+								"post",
+								"{{postId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Dec 2021 09:40:06 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"61b86639905cb348d52a138d\",\n\t\"title\": \"Dog by name Sharik\",\n\t\"content\": \"Today Sharik go to the new parents \",\n    \"dateCreated\": \"2023-12-14T11:39:05\",\n\t\"tags\":[\"Dog\", \"Pets\"],\n    \"likes\": 0,\n    \"comments\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "Add like",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "maxvd",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/forum/post/667f477ccfae355f6bde3687/like",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"forum",
+						"post",
+						"667f477ccfae355f6bde3687",
+						"like"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add like",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/forum/post/{{postId}}/like",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"forum",
+								"post",
+								"{{postId}}",
+								"like"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Dec 2021 12:12:31 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Remove like",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "maxvd",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/forum/post/667b376982f67e476b1ad80c/like",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"forum",
+						"post",
+						"667b376982f67e476b1ad80c",
+						"like"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add like",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/forum/post/{{postId}}/like",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"forum",
+								"post",
+								"{{postId}}",
+								"like"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Dec 2021 12:12:31 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Find posts by author",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/forum/posts/author/{{user}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"forum",
+						"posts",
+						"author",
+						"{{user}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Find posts by author",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/forum/posts/author/{{user}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"forum",
+								"posts",
+								"author",
+								"{{user}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Dec 2021 12:11:13 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n\t\"title\": \"Dog by name Sharik\",\n\t\"content\": \"Today Sharik go to the new parents \",\n    \"dateCreated\": \"2023-12-14T11:39:05\",\n\t\"tags\":[\"Dog\", \"Pets\"],\n        \"likes\": 0,\n        \"comments\": []\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Add comment",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "maxvd",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"message\": \"Awesome!!!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/forum/post/667b376982f67e476b1ad80c/comment/JavaFan1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"forum",
+						"post",
+						"667b376982f67e476b1ad80c",
+						"comment",
+						"JavaFan1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add comment",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"message\": \"Awesome!!!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/forum/post/{{postId}}/comment/{{user}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"forum",
+								"post",
+								"{{postId}}",
+								"comment",
+								"{{user}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Dec 2021 12:11:56 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"61b9c48c041dde2dee7b98d3\",\n\t\"title\": \"Dog by name Sharik\",\n\t\"content\": \"Today Sharik go to the new parents \",\n    \"dateCreated\": \"2023-12-14T11:39:05\",\n\t\"tags\":[\"Dog\", \"Pets\"],\n    \"likes\": 0,\n    \"comments\": [\n        {\n            \"user\": \"Misha\",\n            \"message\": \"Awesome!!!\",\n            \"dateCreated\": \"2023-12-15T14:11:55\",\n            \"likes\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "remove comment",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "maxvd",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"message\": \"Awesome!!!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/forum/post/667b376982f67e476b1ad80c/comment",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"forum",
+						"post",
+						"667b376982f67e476b1ad80c",
+						"comment"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add comment",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/forum/post/{{postId}}/comment/{{user}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"forum",
+								"post",
+								"{{postId}}",
+								"comment",
+								"{{user}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Dec 2021 12:11:56 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"61b9c48c041dde2dee7b98d3\",\n\t\"title\": \"Dog by name Sharik\",\n\t\"content\": \"Today Sharik go to the new parents \",\n    \"dateCreated\": \"2023-12-14T11:39:05\",\n\t\"tags\":[\"Dog\", \"Pets\"],\n    \"likes\": 0,\n    \"comments\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete post",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "maxvd",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/forum/post/667b222a0d9b1a2df2e34d24",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"forum",
+						"post",
+						"667b222a0d9b1a2df2e34d24"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete post",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Dog by name Sharik\",\n\t\"content\": \"Today Sharik go to the new parents \",\n\t\"tags\":[\"Dog\", \"Pets\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/forum/post/667b222a0d9b1a2df2e34d24",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"forum",
+								"post",
+								"667b222a0d9b1a2df2e34d24"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"61b86639905cb348d52a138d\",\n    \"title\": \"Dog by name Sharik\",\n    \"content\": \"Today Sharik go to the new parents \",\n    \"dateCreated\": \"2023-12-14T11:39:05\",\n    \"tags\": [\n        \"Dog\",\n        \"Pets\"\n    ],\n    \"likes\": 0,\n    \"comments\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "Find posts by tags",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\"Dog\", \"Pets\"]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/forum/posts/tags",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"forum",
+						"posts",
+						"tags"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Find posts by tags",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\"Dog\", \"Pets\"]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/forum/posts/tags",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"forum",
+								"posts",
+								"tags"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Dec 2021 21:18:40 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"61b9c48c041dde2dee7b98d3\",\n\t\"title\": \"Dog by name Sharik\",\n\t\"content\": \"Today Sharik go to the new parents \",\n    \"dateCreated\": \"2023-12-14T11:39:05\",\n\t\"tags\":[\"Dog\", \"Pets\"],\n    \"likes\": 0,\n    \"comments\": [\n        {\n            \"user\": \"Misha\",\n            \"message\": \"Awesome!!!\",\n            \"dateCreated\": \"2023-12-15T14:11:55\",\n            \"likes\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Find posts by period",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"dateFrom\": \"2023-05-08\",\n    \"dateTo\": \"2024-07-08\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/forum/posts/period",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"forum",
+						"posts",
+						"period"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Find posts by period",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dateFrom\": \"2023-08-25\",\n    \"dateTo\": \"2024-12-26\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/forum/posts/period",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"forum",
+								"posts",
+								"period"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Dec 2021 21:19:21 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"61b9c48c041dde2dee7b98d3\",\n\t\"title\": \"Dog by name Sharik\",\n\t\"content\": \"Today Sharik go to the new parents \",\n    \"dateCreated\": \"2023-12-14T11:39:05\",\n\t\"tags\":[\"Dog\", \"Pets\"],\n    \"likes\": 0,\n    \"comments\": [\n        {\n            \"user\": \"Misha\",\n            \"message\": \"Awesome!!!\",\n            \"dateCreated\": \"2023-12-15T14:11:55\",\n            \"likes\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Update post",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "maxvd",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Dog by name SharikTest\",\n\t\"content\": \"Today Sharik go to the new parents \",\n\t\"tags\":[\"Dog\", \"Pets\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/forum/post/{{postId}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"forum",
+						"post",
+						"{{postId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update post",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Dog by name SharikTest\",\n\t\"content\": \"Today Sharik go to the new parents \",\n\t\"tags\":[\"Dog\", \"Pets\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/forum/post/{{postId}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"forum",
+								"post",
+								"{{postId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Dec 2021 10:36:42 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"61b9c48c041dde2dee7b98d3\",\n    \"title\": \"Dog by name SharikTest\",\n\t\"content\": \"Today Sharik go to the new parents \",\n    \"dateCreated\": \"2023-12-14T11:39:05\",\n\t\"tags\":[\"Dog\", \"Pets\"],\n    \"likes\": 0,\n    \"comments\": [\n        {\n            \"user\": \"Misha\",\n            \"message\": \"Awesome!!!\",\n            \"dateCreated\": \"2023-12-15T14:11:55\",\n            \"likes\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "test",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "JavaFan1",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/forum/post/667b222a0d9b1a2df2e34d24/like",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"forum",
+						"post",
+						"667b222a0d9b1a2df2e34d24",
+						"like"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "user",
+			"value": "maxvd"
+		},
+		{
+			"key": "postId",
+			"value": "667f477ccfae355f6bde3687"
+		}
+	]
+}
